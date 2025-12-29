@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic/widgets/col_widget.dart';
 import 'package:flutter_basic/widgets/container_widget.dart';
+import 'package:flutter_basic/widgets/row_widget.dart';
 import 'package:flutter_basic/widgets/sizedbox_widget.dart';
+import 'package:flutter_basic/widgets/wrap_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,15 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
         appBarTheme: AppBarTheme(backgroundColor: Colors.blueAccent),
-        textTheme: TextTheme(
-          bodyMedium: TextStyle(color: Colors.black87, fontSize: 20),
-          bodySmall: TextStyle(color: Colors.black87, fontSize: 18),
-        ),
       ),
       // home: ContainerWidget(),
-      home: SizedBoxWidget(),
+      // home: SizedBoxWidget(),
+      // home: RowWidget(),
+      // home: ColWidget(),
+      home: WrapWidget(),
     );
   }
 }
