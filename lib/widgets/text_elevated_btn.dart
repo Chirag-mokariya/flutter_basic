@@ -7,6 +7,17 @@ class ButtonsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Text btn & Elevated btn")),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+        elevation: 10,
+        //shadow
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        tooltip: "take photo",
+        //show in long press or hover
+        child: Icon(Icons.add_a_photo_sharp),
+      ),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -37,6 +48,13 @@ class ButtonsWidget extends StatelessWidget {
                 foregroundColor: Colors.white, //text color
               ),
               child: Text('Submit'),
+            ),
+            SizedBox(height: 20),
+            IconButton(
+              onPressed: () {},
+              color: Colors.blueAccent,
+              iconSize: 40,
+              icon: Icon(Icons.calendar_month),
             ),
           ],
         ),
